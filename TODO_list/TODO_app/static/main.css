@@ -1,0 +1,56 @@
+/* Apply styles to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the table */
+.table-class {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the table header */
+.header-class {
+    background-color: #333;
+    color: #fff;
+}
+
+.header-class th {
+    padding: 10px;
+}
+
+/* Style the table rows */
+.table-class tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style the table cells */
+.table-class td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the checkbox label container */
+.label-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the edit and delete links */
+a {
+    text-decoration: none;
+    color: #0074b8;
+    margin: 0 5px;
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: underline;
+    color: #00568b;
+}

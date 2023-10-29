@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Task</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edit.css' %}">
+</head>
+<body>
+    <div class="main-class">
+        <h1>Edit Task</h1>
+        <div class="form-class">
+            <form method="post">
+                {% csrf_token %}
+                <div class="label-container">
+                    <label for="done">Done:</label>
+                    <input type="checkbox" name="done" {% if task.done %}checked{% endif %}>
+                </div>
+                <br>
+                <div class="label-container">
+                    <label for="task">Task:</label>
+                    <input type="text" name="task" value="{{ task.task }}">
+                </div>
+                <br>
+                <div class="label-container">
+                    <label for="due_date">Due Date:</label>
+                    <input type="date" name="due_date" value="{{ task.due_date|date:'Y-m-d' }}">
+                </div>
+                <br>
+                <div class="label-container">
+                    <label for="priority">Priority:</label>
+                    <input type="text" name="priority" value="{{ task.priority }}">
+                </div>
+                <br>
+                <div class="button-container">
+                    <button type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

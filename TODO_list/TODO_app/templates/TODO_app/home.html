@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Home page</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+    </head>
+
+    <body>
+        <div class="main-class">
+            <h1>TODO APP</h1>
+        
+            <div class="form-class">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="label-container">
+                        <label for="">Task</label>
+                        <input type="text" name="task">
+                    </div>
+                        <br>
+                    <div class="label-container">
+                        <label for="">Due Date</label>
+                        <input type="date" name="due_date" value="">
+                    </div>
+                        <br>
+                    <div class="label-container">
+                        <label for="">Priority</label>
+                        <input type="text" name="priority">
+                    </div>
+                        <br>
+                    <div class="button-container">
+                        <button type="submit">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
